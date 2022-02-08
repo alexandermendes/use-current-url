@@ -4,6 +4,9 @@
 
 A React hook to get the current URL.
 
+Takes into account URL rewrites made by proxies, load balancers, etc. along
+the way (as long as these append special HTTP headers to the request).
+
 ## Installation
 
 ```
