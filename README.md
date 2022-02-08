@@ -12,13 +12,13 @@ yarn add use-current-url
 
 ## Usage
 
-In its most basic form the `useCurrentUrl()` hook will, on mount, return a `URL` object
-containing the current URL:
+In its most basic form the `useCurrentUrl()` hook will, on mount, return the current URL:
 
 ```jsx
 import { useCurrentUrl } from 'use-current-url';
 
 useCurrentUrl();
+// => http://example.com/page
 ```
 
 If your application uses server-side rendering you can pass in an initial URL
