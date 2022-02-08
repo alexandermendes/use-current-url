@@ -57,14 +57,14 @@ The following options are available for the `CurrentUrlProvider`
 
 ### `initialUrl`
 
-Type: `string`
+Type: `string`\
 Default: `undefined`
 
 The initial URL to use when server-side rendering a page.
 
 ### `onMount`
 
-Type: `function`
+Type: `function`\
 Default: `undefined`
 
 A callback to fire when the hook is mounted. It will be called with an
@@ -72,7 +72,7 @@ A callback to fire when the hook is mounted. It will be called with an
 
 ### `onUnmount`
 
-Type: `string`
+Type: `string`\
 Default: `undefined`
 
 A callback to fire when the hook is mounted. It will be called with the same
