@@ -8,7 +8,7 @@ export const useCurrentUrl = () => {
   const {
     initialUrl,
     onMount = noop,
-    onUnmount = noop
+    onUnmount = noop,
   } = useContext(CurrentUrlContext);
 
   const [currentUrl, setCurrentUrl] = useState(initialUrl);
