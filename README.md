@@ -55,7 +55,7 @@ export default App;
 
 The following options are available for the `CurrentUrlProvider`
 
-### `currentUrl`
+### `initialUrl`
 
 Type: `string`
 Default: `undefined`
