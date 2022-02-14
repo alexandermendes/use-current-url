@@ -1,6 +1,6 @@
 {
   "name": "use-current-url",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A React hook to get the current URL.",
   "author": "Alex Mendes",
   "license": "MIT",
