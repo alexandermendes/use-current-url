@@ -1,4 +1,5 @@
 import React from 'react';
+import { renderToString } from 'react-dom/server';
 import { currentUrl } from 'current-url';
 import { render, act } from '@testing-library/react';
 import { CurrentUrlProvider, useCurrentUrl } from '../src';
@@ -44,5 +45,25 @@ describe('CurrentUrlProvider', () => {
     expect(onMount).toHaveBeenCalledTimes(1);
     expect(onUnmount).toHaveBeenCalledTimes(1);
     expect(onMount.mock.calls[0][0]).toEqual(onUnmount.mock.calls[0][0]);
+  });
+
+  describe('SSR', () => {
+    afterEach(() => {
+      document.body.innerHTML = '';
+    });
+
+    it('respects the initial URL for SSR', () => {
+      document.body.innerHTML = renderToString(
+        <CurrentUrlProvider
+          initialUrl="http://initial.com/page"
+        >
+          <Component />
+        </CurrentUrlProvider>
+      );
+
+      const { textContent } = document.querySelector('[data-testid="current-url"]');
+
+      expect(textContent).toBe('http://initial.com/page');
+    });
   });
 });
