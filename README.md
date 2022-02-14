@@ -54,6 +54,8 @@ App.getInitialProps = ({ req }) => (
 export default App;
 ```
 
+Or, for Next.js packages you can use [`next-current-url`](https://www.npmjs.com/package/next-current-url).
+
 ## Options
 
 The following options are available for the `CurrentUrlProvider`
